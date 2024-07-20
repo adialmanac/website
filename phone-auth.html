@@ -1,0 +1,22 @@
+<!-- phone-auth.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Authentication</title>
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="phone-auth.js"></script>
+</head>
+<body>
+  <h1>Phone Authentication</h1>
+  <div id="recaptcha-container"></div>
+  <form id="phone-auth-form">
+    <input type="text" id="phone-number" placeholder="Phone number" required>
+    <button type="button" id="send-code-button">Send Code</button>
+    <input type="text" id="verification-code" placeholder="Verification code" required>
+    <button type="submit">Verify Code</button>
+  </form>
+  <div id="phone-auth-error"></div>
+</body>
+</html>

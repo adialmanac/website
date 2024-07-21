@@ -138,21 +138,3 @@ body {
     background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
     text-decoration: none;
   }
-
-.content {
-    padding: 20px;
-}
-
-.item {
-    background: #fff;
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.loader {
-    text-align: center;
-    padding: 20px;
-    background: #ddd;
-}

@@ -1,20 +1,74 @@
-
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aditya Srivastava</title>
-  <script type="module" src="firebase-config.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+    }
+    .top-container {
+      background: url('images/background.jpg') no-repeat center center/cover;
+      text-align: center;
+      padding: 100px 0;
+      color: white;
+    }
+    .title-text {
+      font-family: 'Sacramento', cursive;
+    }
+    .profile img {
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .skills img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    .contact-me a.btn {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .contact-me a.btn:hover {
+      background-color: #555;
+    }
+    .footer-link {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
-  <a href="login.html">Login</a>
-  <a href="register.html">Register</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Aditya Srivastava</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
   <div class="top-container">
     <img class="top-cloud" src="images/Cloud.png" alt="cloud">
     <div class="title-text">
@@ -25,48 +79,30 @@
     <img class="mountain" src="images/mountain.png" alt="mountain-img">
   </div>
 
-  <div class="middle-container">
-    <div class="profile">
-      <img src="images/aditya.png" alt="angela-profile-img">
-      <h2>Hello ! </h2>
-      <p class="intro">As a software developer, I have experience in designing, developing, testing, and maintaining software applications. This involves writing code in one or more programming languages, such as Java, Python, C++, JavaScript, or Ruby.
-
-<br>
-        I am also familiar with different software development methodologies, such as Agile and Waterfall, and be able to use different tools and technologies, such as version control systems (e.g., Git), integrated development environments (e.g., Eclipse, Visual Studio), and project management software (e.g., Jira).
-     <br>   <br>
-        Some of the key skills and qualities that I hold are
-        <br>
-        Strong problem-solving and analytical skills <br>
-        Ability to work well in a team <br>
-        Attention to detail <br>
-        Good communication skills <br>
-        Passion for learning and staying up-to-date with new technologies and trends <br><br>
-        
-        Worked in a variety of industries, such as technology, finance, healthcare, and education ,for large corporations, small startups, and as a freelancer.
-        
-         Specialized in different areas of software development, such as front-end development (working on the user interface), back-end development (working on the server-side code), or full-stack development (working on both the front-end and back-end).
-         <br> <br> I ❤️ coffee and surfing through the internet.</p>
+  <div class="container middle-container mt-5">
+    <div class="profile text-center">
+      <img src="images/aditya.png" alt="profile-img" width="150">
+      <h2>Hello !</h2>
+      <p class="intro">As a software developer, I have experience in designing, developing, testing, and maintaining software applications...</p>
     </div>
     <hr>
-    <div class="skills">
-      <h2>My Skills.</h2>
-      <div class="skill-row">
-        <img class="code-img" src="images/computer.png" alt="code-img">
-
-        <h3>Design & Development</h3>
-        <p>I started learning to code when I was 12 years old because I wanted to make my own video games. Over time, I have gained a wealth of experience designing and developing mobile and web applications.</p>
-
-      </div>
-      <div class="skill-row">
-        <img class="chilli-img" src="images/chillies.png" alt="chillies-img">
-
-        <h3>Nature Challenge</h3>
-        <p>Spending time in nature for me a great way to recharge and improve my mind. Activities such as hiking, camping, and gardening are enjoyable and provide a sense of accomplishment.Bell Peppers and Broccoli Hamburger are my favourite snacks.</p>
-
+    <div class="skills text-center">
+      <h2>My Skills</h2>
+      <div class="row">
+        <div class="col-md-6 skill-row">
+          <img class="code-img" src="images/computer.png" alt="code-img">
+          <h3>Design & Development</h3>
+          <p>I started learning to code when I was 12 years old because I wanted to make my own video games...</p>
+        </div>
+        <div class="col-md-6 skill-row">
+          <img class="chilli-img" src="images/chillies.png" alt="chillies-img">
+          <h3>Nature Challenge</h3>
+          <p>Spending time in nature for me a great way to recharge and improve my mind...</p>
+        </div>
       </div>
     </div>
     <hr>
-    <div class="contact-me">
+    <div class="contact-me text-center">
       <h2>Get In Touch</h2>
       <h3>If you love Nature as much as I do.</h3>
       <p class="contact-message">Love computers as much as I do? Let's talk about how awesome they are! We can code while we eat hot Sweetcorn!</p>
@@ -74,11 +110,41 @@
     </div>
   </div>
 
-
-  <div class="bottom-container">
+  <div class="bottom-container bg-dark text-white text-center py-3">
     <a class="footer-link" href="https://www.linkedin.com/in/aditya-srivastava-616177222/">LinkedIn</a>
-    <p class="copyright">© 2023 Aditya Srivastava | Adisri199@gmail.com</p>
+    <p class="mb-0">© 2023 Aditya Srivastava | Adisri199@gmail.com</p>
   </div>
-</body>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Dynamic Features
+    $(document).ready(function() {
+      // Example: Load additional content dynamically
+      $('#load-more-btn').on('click', function() {
+        $.ajax({
+          url: 'https://jsonplaceholder.typicode.com/posts?_limit=3',
+          method: 'GET',
+          success: function(data) {
+            let content = '';
+            data.forEach(post => {
+              content += `
+                <div class="card mt-3">
+                  <div class="card-body">
+                    <h5 class="card-title">${post.title}</h5>
+                    <p class="card-text">${post.body}</p>
+                  </div>
+                </div>`;
+            });
+            $('#dynamic-content').append(content);
+          },
+          error: function() {
+            alert('Failed to load content');
+          }
+        });
+      });
+    });
+  </script>
+</body>
 </html>

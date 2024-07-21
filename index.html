@@ -99,37 +99,339 @@
   - let n = 5;
 - let m = n*n;
 
-mixin unit()
-	- let c = Math.round(Math.random());
-	- let tr, dt, to;
-	- if(c) {
-		- tr = +(5 + 3*Math.random()).toFixed(2);
-		- dt = +(-tr*Math.random()).toFixed(2);
-		- to = +(1 + Math.random()).toFixed(2);
-		- cx = +(.25 + .75*Math.random()).toFixed(2);
-	- }
-	.unit(class=c ? 'anim' : null 
-				style=c ? `--tr: ${tr}s; --to: ${to}s; --dt: ${dt}s; --cx: ${cx}` : null)
-		- if(c)
-			.cube.shdw
-				.half
-				.half
-		.gate.shdw
-			.inner.later
-				- for(let i = 0; i < 3; i++)
-					.side
-			.front
-			.outer.later
 
-style
-	- for(let i = 0; i < n; i++)
-		| .unit:nth-child(#{n}n + #{i + 1}) { --i: #{i} }
-		| .unit:nth-child(n + #{n*i + 1}) { --j: #{i} }
-	- for(let i = 0; i < 3; i++)
-		| .side:nth-child(#{i + 1}) { --idx: #{i} }
-.a3d(style=`--n: ${n}`)
-	- for(let i = 0; i < m; i++)
-		+unit()
+<style>.unit:nth-child(5n + 1) { --i: 0 }
+  .unit:nth-child(n + 1) { --j: 0 }.unit:nth-child(5n + 2) { --i: 1 }
+  .unit:nth-child(n + 6) { --j: 1 }.unit:nth-child(5n + 3) { --i: 2 }
+  .unit:nth-child(n + 11) { --j: 2 }.unit:nth-child(5n + 4) { --i: 3 }
+  .unit:nth-child(n + 16) { --j: 3 }.unit:nth-child(5n + 5) { --i: 4 }
+  .unit:nth-child(n + 21) { --j: 4 }.side:nth-child(1) { --idx: 0 }.side:nth-child(2) { --idx: 1 }.side:nth-child(3) { --idx: 2 }
+</style>
+<div class="a3d" style="--n: 5">
+  <div class="unit anim" style="--tr: 5.05s; --to: 1.3s; --dt: -0.57s; --cx: 0.34">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 5.46s; --to: 1.99s; --dt: -4.35s; --cx: 0.83">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 6.91s; --to: 1.62s; --dt: -5.05s; --cx: 0.9">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 5.94s; --to: 1.92s; --dt: -4.97s; --cx: 0.95">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 5.61s; --to: 1.88s; --dt: -4.97s; --cx: 0.92">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 5.67s; --to: 1.43s; --dt: -5.16s; --cx: 0.83">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 5.39s; --to: 1.75s; --dt: -3.49s; --cx: 0.45">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 5.38s; --to: 1.18s; --dt: -0.77s; --cx: 0.97">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 7.31s; --to: 1.46s; --dt: -1.91s; --cx: 0.38">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 5.69s; --to: 1.82s; --dt: -3.73s; --cx: 0.8">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 6.61s; --to: 1.16s; --dt: -1.14s; --cx: 0.45">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit anim" style="--tr: 5.88s; --to: 1.43s; --dt: -4.52s; --cx: 0.49">
+    <div class="cube shdw">
+      <div class="half"></div>
+      <div class="half"></div>
+    </div>
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+  <div class="unit">
+    <div class="gate shdw">
+      <div class="inner later">
+        <div class="side"></div>
+        <div class="side"></div>
+        <div class="side"></div>
+      </div>
+      <div class="front"></div>
+      <div class="outer later"></div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>

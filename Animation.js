@@ -51,22 +51,5 @@ ReactDOM.render(
   <App/>,
   document.body
 );
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const content = document.querySelector('.content');
-    const footer = document.querySelector('footer');
 
-    function adjustFooterPosition() {
-        const contentHeight = content.offsetHeight;
-        const viewportHeight = window.innerHeight;
-        const footerHeight = footer.offsetHeight;
-
-        if (contentHeight + footerHeight < viewportHeight) {
-            content.style.minHeight = `${viewportHeight - footerHeight}px`;
-        }
-    }
-
-    adjustFooterPosition();
-    window.addEventListener('resize', adjustFooterPosition);
-});
 
